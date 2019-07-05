@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #myDiv{
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <h1>Do You Love Me</h1>
+    <input type="button" value="YES"  onclick="clickYes()" />
+    <input type="button" value="NO" id="myDiv" onmouseover ="clickNo()" />
+</form>
+<script>
+    function clickYes() {
+        alert("Yes. you are right ");
+    }
+    function clickNo() {
+        div = document.getElementById("myDiv");
+
+        div.style.left   = Math.floor(Math.random() * 500)+"px";
+        div.style.top    = Math.floor(Math.random() * 700)+"px";
+        div.style.right  = Math.floor(Math.random() * 700)+"px";
+    }
+</script>
+
+
+</body>
+</html>
